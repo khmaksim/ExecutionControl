@@ -1,0 +1,170 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>OpenPlanDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>OpenPlanDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>624</width>
+            <height>346</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Открыть план</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <spacer row="1" column="0">
+            <property name="name">
+                <cstring>spacer10</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>340</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QPushButton" row="1" column="2">
+            <property name="name">
+                <cstring>cancelButton</cstring>
+            </property>
+            <property name="text">
+                <string>Отмена</string>
+            </property>
+            <property name="iconSet">
+                <iconset>block_16.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="1" column="1">
+            <property name="name">
+                <cstring>openButton</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string>Открыть</string>
+            </property>
+            <property name="default">
+                <bool>true</bool>
+            </property>
+            <property name="iconSet">
+                <iconset>tick_16.png</iconset>
+            </property>
+        </widget>
+        <widget class="QGroupBox" row="0" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>groupBox3</cstring>
+            </property>
+            <property name="title">
+                <string>Список планов</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QTable" row="0" column="0" rowspan="1" colspan="3">
+                    <property name="name">
+                        <cstring>planTable</cstring>
+                    </property>
+                    <property name="mouseTracking">
+                        <bool>false</bool>
+                    </property>
+                    <property name="hScrollBarMode">
+                        <enum>Auto</enum>
+                    </property>
+                    <property name="numRows">
+                        <number>0</number>
+                    </property>
+                    <property name="numCols">
+                        <number>1</number>
+                    </property>
+                    <property name="showGrid">
+                        <bool>true</bool>
+                    </property>
+                    <property name="readOnly">
+                        <bool>true</bool>
+                    </property>
+                    <property name="selectionMode">
+                        <enum>NoSelection</enum>
+                    </property>
+                    <property name="focusStyle">
+                        <enum>FollowStyle</enum>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="2">
+                    <property name="name">
+                        <cstring>resetAllButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="text">
+                        <string>Сбросить все</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>selectAllButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="text">
+                        <string>Отметить все</string>
+                    </property>
+                </widget>
+                <spacer row="1" column="0">
+                    <property name="name">
+                        <cstring>spacer14</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>380</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>cancelButton</sender>
+        <signal>clicked()</signal>
+        <receiver>OpenPlanDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>openButton</sender>
+        <signal>clicked()</signal>
+        <receiver>OpenPlanDialogBase</receiver>
+        <slot>accept()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>openButton</tabstop>
+    <tabstop>cancelButton</tabstop>
+</tabstops>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

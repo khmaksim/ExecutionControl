@@ -1,0 +1,151 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>EditPlanDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>EditPlanDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>544</width>
+            <height>147</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Редактировать план</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QPushButton" row="2" column="3">
+            <property name="name">
+                <cstring>cancelButton</cstring>
+            </property>
+            <property name="text">
+                <string>Отмена</string>
+            </property>
+            <property name="iconSet">
+                <iconset>block_16.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="2" column="2">
+            <property name="name">
+                <cstring>editButton</cstring>
+            </property>
+            <property name="text">
+                <string>Редактировать</string>
+            </property>
+            <property name="iconSet">
+                <iconset>pencil_16.png</iconset>
+            </property>
+        </widget>
+        <spacer row="2" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>spacer10</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>340</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="4">
+            <property name="name">
+                <cstring>layout9</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Выберите название плана:</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter</set>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>namePlanComboBox</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QTextEdit" row="1" column="1" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>namePlanTextEdit</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="wordWrap">
+                <enum>WidgetWidth</enum>
+            </property>
+            <property name="wrapPolicy">
+                <enum>Anywhere</enum>
+            </property>
+        </widget>
+        <widget class="QLabel" row="1" column="0">
+            <property name="name">
+                <cstring>textLabel1_2</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>5</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="text">
+                <string>Введите наименование плана:</string>
+            </property>
+            <property name="alignment">
+                <set>AlignTop|AlignRight</set>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>cancelButton</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPlanDialogBase</receiver>
+        <slot>close()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>namePlanComboBox</tabstop>
+    <tabstop>namePlanTextEdit</tabstop>
+    <tabstop>editButton</tabstop>
+    <tabstop>cancelButton</tabstop>
+</tabstops>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
